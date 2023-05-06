@@ -1,0 +1,47 @@
+﻿@page "/"
+
+<PageTitle>Calculator</PageTitle> 
+
+<div class="container">
+  <div class="calc-body">
+    <div class="calc-screen">
+      <div class="calc-operation" id="fulloperation">@outputVisor</div>
+      <div class="calc-typed" id="operation">@input<span class="blink-me">_</span></div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button c" @onclick="() => Clear()">C</div>
+      <div class="button c" @onclick="() => DelOutput()">AC</div>
+      <div class="button c" @onclick="() => Del()">Del</div>
+      <div class="button l" @onclick="() => Rand()">Rnd</div>
+      <div class="button l" @onclick="() => Division()">/</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" @onclick="() => Add(7)">7</div>
+      <div class="button" @onclick="() => Add(8)">8</div>
+      <div class="button" @onclick="() => Add(9)">9</div>
+      <div class="button" @onclick="() => Suma()">Sum</div>
+      <div class="button l" @onclick="() => Multi()">x</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" @onclick="() => Add(4)">4</div>
+      <div class="button" @onclick="() => Add(5)">5</div>
+      <div class="button" @onclick="() => Add(6)">6</div>
+      <div class="button" @onclick="() => Average()">Avg</div>
+      <div class="button l" @onclick="() => Menos()">−</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" @onclick="() => Add(1)">1</div>
+      <div class="button" @onclick="() => Add(2)">2</div>
+      <div class="button" @onclick="() => Add(3)">3</div>
+      <div class="button" @onclick="() => Minim()">Min</div>
+      <div class="button l" @onclick="() => Mas()">+</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" @onclick="() => Add(0)">0</div>
+      <div class="button" @onclick="() => AddPoint()">.</div>
+      <div class="button" @onclick="() => AddOutput()">Add</div>
+      <div class="button" @onclick="() => Maxim()">Max</div>
+      <div class="button q" @onclick="() => Igual()">=</div> 
+    </div>
+  </div>
+</div>
